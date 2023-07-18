@@ -1,2 +1,4 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<form action="/logout" method="post">
+  <button class="logout" type="submit">Sign out</button>
+  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+</form>
