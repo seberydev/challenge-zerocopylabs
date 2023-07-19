@@ -8,6 +8,8 @@ import session from "express-session";
 import passport from "passport";
 
 import indexRouter from "./routes/index.js";
+import loginRouter from "./routes/login.js";
+import apiRouter from "./routes/api.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -31,6 +33,8 @@ app.use(
 app.use(passport.authenticate("session"));
 
 app.use("/", indexRouter);
+app.use("/login", loginRouter);
+app.use("/api", apiRouter);
 
 app.use((req, res, next) => {
   next(createError(404));

@@ -1,0 +1,102 @@
+.profile-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.8rem;
+}
+
+.profile-container > div {
+  width: 100%;
+  max-width: 35rem;
+}
+
+.profile-container > div > div > img {
+  width: 100%;
+  max-width: 14rem;
+  border-radius: 50%;
+}
+
+.profile-container > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container > div > div > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 1.8rem 0;
+}
+
+.profile-container > div > div > div button,
+.profile-container > div > form > div button {
+  font-weight: bold;
+  background-color: lightgrey;
+  border: none;
+  cursor: pointer;
+  border-radius: 2.5px;
+  padding: 0.5rem 0rem;
+  flex: 1;
+  font-size: 1.8rem;
+}
+
+.profile-container > div > form > div {
+  display: flex;
+  margin-top: 1.2rem;
+}
+
+.profile-container > div > form > div button:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.profile-container > div > div > div form {
+  flex: 1;
+}
+
+.profile-container > div > div > div form button {
+  width: 100%;
+}
+
+.profile-container > div > div > div button:nth-child(2) {
+  margin: 0 1.8rem;
+}
+
+.profile-container form input {
+  border: 1.5px solid lightgrey;
+  border-radius: 3px;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.6rem;
+}
+
+.profile-container form section {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container form section label {
+  margin-left: 3px;
+  font-size: 1.8rem;
+}
+
+.profile-container form section:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.profile-container .active {
+  background-color: darkgray;
+  color: white;
+  border: 1.5px solid lightgray;
+}
+
+.profile-container > div > section {
+  font-size: 1.8rem;
+}
+
+.profile-container span {
+  font-weight: bold;
+  font-size: 1.8rem;
+}

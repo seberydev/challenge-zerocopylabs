@@ -1,4 +1,58 @@
-<form action="/logout" method="post">
-  <button class="logout" type="submit">Sign out</button>
-  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
-</form>
+<main class="profile-container">
+  <div>
+    <div>
+      <img src="" alt="picture" id="pictureImg" />
+      <div>
+        <button type="button" id="balanceBtn">BALANCE</button>
+        <button type="button" class="active" id="editBtn">EDIT</button>
+        <form action="/logout" method="post">
+          <button class="logout" type="submit">LOGOUT</button>
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        </form>
+      </div>
+    </div>
+    <form id="editFormContainer">
+      <section>
+        <label for="first">First Name</label>
+        <input id="first" name="first" type="text" required />
+      </section>
+      <section>
+        <label for="last">Last Name</label>
+        <input id="last" name="last" type="text" required />
+      </section>
+      <section>
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" required />
+      </section>
+      <section>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required />
+      </section>
+      <section>
+        <label for="address">Address</label>
+        <input id="address" name="address" type="text" required />
+      </section>
+      <section>
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text" required />
+      </section>
+      <section>
+        <label for="eye">Eye Color</label>
+        <input id="eye" name="eye" type="text" required />
+      </section>
+      <section>
+        <label for="picture">Picture URL</label>
+        <input id="picture" name="picture" type="text" required />
+      </section>
+      <div>
+        <button type="button" id="saveBtn">SAVE</button>
+        <button type="button" id="resetBtn">RESET</button>
+      </div>
+    </form>
+    <section id="balanceContainer" style="display: none;">
+      <p>Your balance is <span id="balanceText"></span></p>
+    </section>
+  </div>
+</main>
+
+<script src="/javascripts/profile.js"></script>
