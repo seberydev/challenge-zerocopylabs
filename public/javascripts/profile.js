@@ -85,8 +85,12 @@ const main = async () => {
 
   const saveBtn = document.getElementById("saveBtn");
   saveBtn.addEventListener("click", async () => {
+    if (saveBtn.classList.contains("active")) return;
+
     const userData = getUserDataFromClient();
+    saveBtn.classList.add("active");
     await updateUser(userUrl, userData);
+    saveBtn.classList.remove("active");
     data = userData;
     resetUserClientData(data);
   });
