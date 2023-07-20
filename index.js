@@ -56,3 +56,5 @@ const onListening = () => {
 };
 
 server.on("listening", onListening);
+
+export default server;
